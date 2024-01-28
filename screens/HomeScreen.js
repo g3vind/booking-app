@@ -2,6 +2,7 @@ import { StyleSheet, Text, View } from "react-native";
 import React, { useLayoutEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { Ionicons } from "@expo/vector-icons";
+import Header from "../components/Header";
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -14,7 +15,12 @@ const HomeScreen = () => {
         fontWeight: "bold",
         color: "white",
       },
-      headerStyle: { backgroundColor: "#003580", height: 110 },
+      headerStyle: {
+        backgroundColor: "#003580",
+        height: 110,
+        borderBottomColor: "transparent",
+        shadowColor: "transparent",
+      },
       headerRight: () => (
         <Ionicons
           name="notifications-outline"
@@ -28,7 +34,7 @@ const HomeScreen = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>HomeScreen</Text>
+      <Header />
     </View>
   );
 };
