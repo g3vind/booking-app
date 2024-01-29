@@ -1,5 +1,6 @@
 import {
   Button,
+  Image,
   Pressable,
   ScrollView,
   StyleSheet,
@@ -22,7 +23,7 @@ import {
   ModalTitle,
   SlideAnimation,
 } from "react-native-modals";
-
+import { MaterialIcons } from "@expo/vector-icons";
 const HomeScreen = () => {
   const navigation = useNavigation();
 
@@ -157,7 +158,7 @@ const HomeScreen = () => {
                 }
                 customButton={(onConfirm) => customButton(onConfirm)}
                 allowFontScaling={false}
-                placeholder={"11 Sept 2024 to 20 Sept 2024"}
+                placeholder={"Select Your Booking Dates"}
                 mode={"range"}
               ></DatePicker>
             </Pressable>
@@ -202,6 +203,144 @@ const HomeScreen = () => {
               </Text>
             </Pressable>
           </View>
+          {/* BOTTOM CARDS */}
+          <Text
+            style={{
+              marginHorizontal: 10,
+              fontSize: 19,
+              fontWeight: 500,
+              textAlign: "center",
+            }}
+          >
+            Travel More and Spend Less
+          </Text>
+          <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+            {/* CARD ONE */}
+            <Pressable
+              style={{
+                width: 200,
+                height: 150,
+                marginTop: 10,
+                backgroundColor: "#003580",
+                borderRadius: 10,
+                padding: 20,
+                marginHorizontal: 20,
+              }}
+            >
+              <Text
+                style={{
+                  color: "white",
+                  fontSize: 15,
+                  fontWeight: "bold",
+                  marginVertical: 7,
+                }}
+              >
+                Genius
+              </Text>
+              <Text
+                style={{
+                  color: "white",
+                  fontSize: 15,
+                  fontWeight: 500,
+                  marginVertical: 7,
+                }}
+              >
+                You are at genius level 1 at our loyalty program.
+              </Text>
+            </Pressable>
+            {/* CARD TWO */}
+            <Pressable
+              style={{
+                width: 200,
+                height: 150,
+                marginTop: 10,
+                borderColor: "#e0e0e0",
+                borderWidth: 2,
+                borderRadius: 10,
+                padding: 20,
+                marginHorizontal: 20,
+              }}
+            >
+              <View style={{ flexDirection: "row", alignItems: "center" }}>
+                <Text
+                  style={{
+                    fontSize: 15,
+                    fontWeight: "bold",
+                    marginVertical: 7,
+                    marginRight: 5,
+                    textAlign: "center",
+                  }}
+                >
+                  15% Discount
+                </Text>
+                <MaterialIcons name="discount" size={24} color="black" />
+              </View>
+              <Text
+                style={{
+                  textAlign: "center",
+                  fontSize: 15,
+                  fontWeight: 500,
+                  marginVertical: 7,
+                }}
+              >
+                Complete 5 Stays to Unlock Level 2
+              </Text>
+            </Pressable>
+
+            {/* CARD THREE */}
+            <Pressable
+              style={{
+                width: 200,
+                height: 150,
+                marginTop: 10,
+                borderColor: "#e0e0e0",
+                borderWidth: 2,
+                borderRadius: 10,
+                padding: 20,
+                marginHorizontal: 20,
+              }}
+            >
+              <View style={{ flexDirection: "row", alignItems: "center" }}>
+                <Text
+                  style={{
+                    fontSize: 15,
+                    fontWeight: "bold",
+                    marginVertical: 7,
+                    marginRight: 5,
+                    textAlign: "center",
+                  }}
+                >
+                  10% Discount
+                </Text>
+                <MaterialIcons name="discount" size={24} color="black" />
+              </View>
+              <Text
+                style={{
+                  textAlign: "center",
+                  fontSize: 15,
+                  fontWeight: 500,
+                  marginVertical: 7,
+                }}
+              >
+                Apply Coupon "EARLYBIRD"
+              </Text>
+            </Pressable>
+          </ScrollView>
+          {/* LOGO */}
+          <Pressable
+            style={{
+              marginTop: 40,
+              justifyContent: "center",
+              alignItems: "center", // Corrected typo here
+            }}
+          >
+            <Image
+              style={{ width: 200, height: 50, resizeMode: "cover" }}
+              source={{
+                uri: "https://assets.stickpng.com/thumbs/5a32a821cb9a85480a628f8f.png",
+              }}
+            />
+          </Pressable>
         </ScrollView>
       </View>
       {/* BOTTOM MODAL */}
